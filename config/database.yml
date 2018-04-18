@@ -1,0 +1,28 @@
+
+default: &default
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+  
+development:
+  <<: *default
+  database: db/development.sqlite3
+#development:
+#  adapter: sqlite3
+#  encoding: unicode
+#  database: appwebexemps
+#  pool: 5
+#  username: teste
+#  password:
+
+test:
+  <<: *default
+  database: db/test.sqlite3
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: appwebexemps
+  pool: 5
+  username: teste
+  password:

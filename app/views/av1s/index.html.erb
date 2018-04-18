@@ -1,0 +1,36 @@
+
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Av1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Matricula</th>
+      <th>Email Pessoal</th>
+      <th>Email Lasalle</th>
+      <th>Nome</th>
+      <th>Curso</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @av1s.each do |av1| %>
+      <tr>
+        <td><%= av1.matricula %></td>
+        <td><%= av1.email1 %></td>
+        <td><%= av1.email2 %></td>
+        <td><%= av1.nome %></td>
+        <td><%= av1.curso %></td>
+        <td><%= link_to 'Show', av1 %></td>
+        <td><%= link_to 'Edit', edit_av1_path(av1) %></td>
+        <td><%= link_to 'Destroy', av1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Av1', new_av1_path %>
