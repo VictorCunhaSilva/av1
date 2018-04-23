@@ -1,7 +1,7 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Av1s</h1>
+<h1>Alunos</h1>
 
 <table>
   <thead>
@@ -23,9 +23,9 @@
         <td><%= av1.email2 %></td>
         <td><%= av1.nome %></td>
         <td><%= av1.curso %></td>
-        <td><%= link_to 'Show', av1 %></td>
-        <td><%= link_to 'Edit', edit_av1_path(av1) %></td>
-        <td><%= link_to 'Destroy', av1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', av1 %></td>
+        <td><%= link_to 'Editar', edit_av1_path(av1) %></td>
+        <td><%= link_to 'Apagar', av1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,4 +33,4 @@
 
 <br>
 
-<%= link_to 'New Av1', new_av1_path %>
+<%= link_to 'Criar', new_av1_path %>

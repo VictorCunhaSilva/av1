@@ -3,6 +3,7 @@ default: &default
   adapter: sqlite3
   pool: 5
   timeout: 5000
+  port: 5432
   
 development:
   <<: *default
@@ -26,3 +27,4 @@ production:
   pool: 5
   username: teste
   password:
+  port: 5432
